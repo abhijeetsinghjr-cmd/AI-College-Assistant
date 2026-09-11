@@ -1,12 +1,9 @@
 from flask import Flask, request, jsonify, session, redirect
 import requests
-from openai import OpenAI
-import os
 
 app = Flask(__name__)
 app.secret_key = "ai-college-assistant-secret-key"
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 @app.route("/")
 def home():
